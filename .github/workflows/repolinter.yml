@@ -58,11 +58,11 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t iamkarans/relicstaurants:v1 .
+        docker build -t iamkarans/relicstaurants:${{ github.sha }} .
       
     - name: Push Docker image to Docker Hub
       run: |
-        docker push iamkarans/relicstaurants:v1
+        docker push iamkarans/relicstaurants:${{ github.sha }}
 
     - name: Logout from Docker Hub
       run: docker logout
