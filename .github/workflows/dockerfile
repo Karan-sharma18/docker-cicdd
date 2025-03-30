@@ -2,7 +2,7 @@
 FROM node:14
 
 # Step 2: Set the working directory inside the container
-WORKDIR .github/workflows
+WORKDIR G:\relicstaurants\relicstaurants-personal
 # Step 3: Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
