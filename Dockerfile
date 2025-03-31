@@ -2,7 +2,7 @@
 FROM node:14
 
 # Step 2: Set the working directory inside the container
-WORKDIR G:\relicstaurants\relicstaurants-personal
+WORKDIR /app
 # Step 3: Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
