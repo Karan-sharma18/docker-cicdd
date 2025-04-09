@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: relicstaurants-service
+spec:
+  selector:
+    app: relicstaurants
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000  # Adjust port based on your app
+  type: LoadBalancer  # Or ClusterIP depending on your use case

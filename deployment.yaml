@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: relicstaurants
+spec:
+  replicas: 3  # Number of pods
+  selector:
+    matchLabels:
+      app: relicstaurants
+  template:
+    metadata:
+      labels:
+        app: relicstaurants
+    spec:
+      containers:
+        - name: relicstaurants
+          image: iamkarans/relicstaurants:latest
+          ports:
+            - containerPort: 3000  # Adjust port based on your app
